@@ -1,0 +1,13 @@
+h1{
+    background-image: url(doraemon.jfif);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    text-align: center;
+    color: black;
+    height: 80vh;
+}
+p{
+    background-color: beige;
+    color: blue;
+}
