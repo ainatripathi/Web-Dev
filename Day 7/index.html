@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms</title>
+</head>
+<style>
+    body{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        flex-direction: column;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    form{
+        border: 2px solid transparent;
+        padding: 25px 20px;
+        border-radius: 8px;
+        background-color: cornsilk;
+    }
+    input{
+        border: 2px solid transparent;
+        border-radius: 8px;
+        padding: 10px;
+        background-color: bisque;
+        outline: none;
+    }
+    button{
+        border: 3px solid transparent;
+        border-radius: 8px;
+        padding: 10 px;
+        background-color: bisque;
+    }
+</style>
+<body>
+<h1>This is element</h1>
+<form action="index.html">
+    <label for="fname">Full Name</label><br>
+    <input type="text" name="fname" id="fname"><br>
+        <label for="lname">Last name</label><br>
+        <input type="text" name="lname" id="lname"><br>
+        <input type="radio" id="mango" name="fruits" value="mango">
+        <label for="mango">Mango</label><br>
+        <input type="radio" id="orange" name="fruits" value="orange">
+        <label for="orange">Orange</label><br>
+        <label for="players">Choose your favourite player</label>
+    <h1>The Select Element</h1><br>
+        <select name="favourite_player" id="players">
+            <option value="MS Dhoni">MS Dhoni</option>
+            <option value="Virat Kohli">Virat Kohli</option>
+            <option value="Rohit Sharma">Rohit Sharma</option>
+        </select><br>
+        <h1>The Textarea Element</h1>
+        <label>Enter your feedback</label><br>
+        <textarea name="message" rows="10" cols="30"></textarea><br><br>
+        <h1>The Button Element</h1>
+        <button type="button" onclick="alert("Welcome to Dot Net Tutorials")">Prompt</button>
+        <input type="submit" value="Submit">
+</form>
+</body>
+</html>
