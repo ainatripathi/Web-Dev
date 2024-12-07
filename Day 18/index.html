@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        #heading2{
+            color: burlywood;
+        }
+        #changeColorButton{
+            padding: 10px 20px;
+            background-color: burlywood;
+            color: darkslategray;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button.hover{
+            background-color:aliceblue;
+        }
+        #instruction{
+            font-size: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="heading">Hello, World!</h1>
+    <button onclick="changetext()">Change Text</button>
+    <p id="text">This is a paragraph.</p>
+    <button onclick="changestyle()">Change Style</button>
+    <label for="name">Enter your name:</label>
+    <input type="text" id="name">
+    <button onclick="showName()">Submit</button>
+    <p id="output"></p>
+    <h1>Click the button</h1>
+    <button id="myButton">Click me</button>
+    <p id="output1"></p>
+    <h1 id="heading2">Interaction Web Page</h1>
+    <button id="changeColorButton">Change Background Color</button>
+    <p id="instruction">Click on button to see the magic!</p>
+    <script>
+        function changetext(){
+    const heading = document.getElementById("heading");
+    heading.textContent ="Text Changed";
+}
+function changestyle(){
+    const text= document.getElementById("text");
+    text.style.color="blue";
+    text.style.fontSize="24px";
+}
+function showName(){
+    const nameInput = document.getElementById("name");
+    const output = document.getElementById("output");
+    output.textContent = "Hello, "+nameInput.value+"!";
+}
+const button = document.getElementById("myButton");
+const output = document.getElementById("output");
+button.addEventListener('click', ()=>{
+    output1.textContent = "You clicked the button!";
+});
+const button1=document.getElementById("changeColorButton");
+const body=document.body;
+button1.addEventListener('click', ()=>{
+    const colors=["blue", "red", "green", "brown"];
+    const randomColors=colors[Math.floor(Math.random()*colors.length)];
+    body.style.backgroundColor=randomColors;
+});
+    </script>
+</body>
+</html>
